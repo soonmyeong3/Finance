@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: bobi
+      POSTGRES_PASSWORD: bobi
+      POSTGRES_DB: bobi
+    ports:
+      - "5432:5432"
+    volumes:
+      - bobi_pgdata:/var/lib/postgresql/data
+
+volumes:
+  bobi_pgdata:
